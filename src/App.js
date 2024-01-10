@@ -19,21 +19,12 @@ function App() {
                 <span className="nav-link">Home</span>
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to={`/`} className="nav-link">
-                <span className="nav-link">Új hangszer</span>
-              </NavLink>
-            </li>
           </ul>
         </div>
       </nav>
       <Routes>
-        <Route path="/" element={<InstrumentListPage />} />
-        <Route
-          path="/hangszer/:hangszerId"
-          element={<InstrumentSinglePage />}
-        />
-        <Route path="uj-hangszer" element={<InstrumentCreatePage />} />
+        <Route path="/" element={<PizzaHome />} />
+        <Route path="/mod/:pizzaid" element={<PizzaMod />} />
       </Routes>
     </Router>
   );

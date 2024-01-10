@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import { NavLink } from "react-router-dom";
 
 export function PizzaHome() {
   const [isFetchPending, setFetchPending] = useState(false);
@@ -32,7 +33,7 @@ export function PizzaHome() {
                 ></img>
                 <form>
                   <button type="button" class="btn btn-info">
-                    Módosítás
+                    <NavLink to={`/mod/${pizza.id}`}>Módosítás</NavLink>
                   </button>
                 </form>
                 <form
@@ -98,4 +99,4 @@ export function PizzaHome() {
   );
 }
 
-export default App;
+export default PizzaHome;
